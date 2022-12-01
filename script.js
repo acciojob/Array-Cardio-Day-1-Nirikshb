@@ -33,7 +33,7 @@ export function myfilter() {
   i.year > 1500 && i.year<1600
 
   ).map(e =>e.year)
-  console.log(born)
+ 
 )}
    
     
