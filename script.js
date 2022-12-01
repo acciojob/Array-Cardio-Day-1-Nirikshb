@@ -30,45 +30,64 @@ const people = [
 // 1. Filter the list of inventors for those who were born in the 1500's and return the filtered array
 export function myfilter() {
 
-}
+  ).map(e =>e.year)
+)}
+   
+    
 
 // Array.prototype.map()
 // 2. Give us an array of the inventor first and last names (i.e. full name)
 // Ex: For the first inventor the full name will be 'Albert Einstein'
-export function map() {
 
+export function map() {
+    const newName = inventors.map((name)=>name.first +" " + name.last);
+    console.log(newName);
 }
 
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest and return the sorted array
-export function sort() {
-
+ export function sort() {
+  console.log(inventors.sort((a, b) => a.year-b.year).map((e) => e.year));
 }
-
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live?
 // Return the total number of years all the inventors lived
 export function reduce() {
+  console.log(inventors.reduce((a, b) => a.passed-b.year).map((e) => e.year));
 
 }
 
 // 5. Sort the inventors by years lived and return the sorted array
 export function sortbylived() {
-
+  const lived = (inventors.sort((a,b) => a.year - b.passed).map((e) => e.year));
+  console.log(lived)
 }
+
 
 // 6. sort Exercise
 // Sort the people alphabetically by last name and return the sorted array
-export function sortByLastName() {
-
-}
+ export function sortByLastName() {
+  people.sort();
+ console.log(people);
+ }
 
 // 7. Reduce Exercise
 // Sum up the instances of each of these
 const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick'];
 
-export function reducedSum() {
-    // Return an object containing transports as key and its number of occurances as the key's value
+ export function reducedSum() {
+  const count = {};
+for (let index = 0; index < data.length; index++) {
+  const element = data[index];
+
+  if (count[element]) {
+    count[element] += 1;
+  } else {
+    count[element] = 1;
+  }
 }
+console.log(count);
+}
+    // Return an object containing transports as key and its number of occurances as the key's value
