@@ -60,13 +60,13 @@ export function map() {
 // 4. How many years did all the inventors live?
 // Return the total number of years all the inventors lived
 export function reduce() {
-  const defo = inventors.reduce((a, b) => a.passed-b.year);
+  const defo = inventors.reduce((accumulator, currentValue) => accumulator + currentValue.passed-currentValue.year,0);
   return defo;
 }
 
 // 5. Sort the inventors by years lived and return the sorted array
 export function sortbylived() {
-  const lived = inventors.sort((a,b) => a.year - b.passed).map((e) => e.year);
+  const lived = inventors.sort((a) => (a.passed -a.year));
   return lived;
 }
 
