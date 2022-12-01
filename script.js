@@ -60,7 +60,7 @@ export function map() {
 // 4. How many years did all the inventors live?
 // Return the total number of years all the inventors lived
 export function reduce() {
-  const defo = inventors.reduce((a, b) => a.passed-b.year).map((e) => e.year);
+  const defo = inventors.reduce((a, b) => a.passed-b.year);
   return defo;
 }
 
