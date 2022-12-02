@@ -74,8 +74,16 @@ export function sortbylived() {
 // 6. sort Exercise
 // Sort the people alphabetically by last name and return the sorted array
  export function sortByLastName() {
- const sorted = people.sort();
- return sorted;
+
+  people.sort(function (a, b) {
+    if (a > b) {
+        return -1;
+    }
+    if (b > a) {
+        return 1;
+    }
+    return 0;
+});
  }
 
 // 7. Reduce Exercise
