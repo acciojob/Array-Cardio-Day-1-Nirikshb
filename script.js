@@ -66,7 +66,7 @@ export function reduce() {
 
 // 5. Sort the inventors by years lived and return the sorted array
 export function sortbylived() {
-  const lived = inventors.sort((a) => (a.passed -a.year));
+ const lived = inventors.sort((a,b) => (b.passed -b.year - (a.passed - a.year)));
   return lived;
 }
 
@@ -74,16 +74,8 @@ export function sortbylived() {
 // 6. sort Exercise
 // Sort the people alphabetically by last name and return the sorted array
  export function sortByLastName() {
-
-  people.sort(function (a, b) {
-    if (a > b) {
-        return -1;
-    }
-    if (b > a) {
-        return 1;
-    }
-    return 0;
-});
+ const sorted = people.sort();
+ return sorted;
  }
 
 // 7. Reduce Exercise
